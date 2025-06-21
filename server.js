@@ -103,14 +103,8 @@ app.get('/student', (req, res) => {
     res.sendFile(__dirname + '/student.html');
 });
 
-server.listen(3000, () => {
-    console.log('server is running on port 3000');
-});
 
-
-/*
-server.listen(8080, () => {
-    console.log('Server is running on http://goodmokja77.mycafe24.com:8080');
+const socket = io('wss://your-server-domain:port', {
+  transports: ['websocket']
 });
-*/
 
