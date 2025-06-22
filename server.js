@@ -103,9 +103,10 @@ app.get('/student', (req, res) => {
     res.sendFile(__dirname + '/student.html');
 });
 
-
-const socket = io('wss://handsup.netlify.app:8080', {
-    transports: ['websocket'],
-    upgrade: false
+const PORT = process.env.PORT || 443;
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
+
+
 
